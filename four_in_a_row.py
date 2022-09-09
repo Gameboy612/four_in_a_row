@@ -9,7 +9,7 @@ class board:
     def __init__(self, x, y):
         self.x = x
         self.y = y
-        self.grid = [[" " for i in range(x)] for i in range(y)]
+        self.grid = [[const_empty for i in range(x)] for i in range(y)]
 
     def print_board(self):
         for i in range(len(self.grid)):
@@ -18,9 +18,6 @@ class board:
         print("")
         print([str(i) for i in range(self.x)])
         print("Turn: " + self.turn)
-
-    def get_board(self, x, y):
-        return self.grid[y][x]
     
     def set_board(self, x, y, char):
         self.grid[y][x] = char
